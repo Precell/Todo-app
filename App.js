@@ -15,9 +15,9 @@ export default function App() {
   ])
 
   const pressHandler = (key) =>{
-   setTodos((prevTodos) =>{
-      return  prevTodos.filter((todo) => todo.key != key)
-    })
+   setTodos((prevTodos) => {
+    return prevTodos.filter(todo => todo.key != key)
+   })
   }
 
   const submitHandler = (text) =>{
@@ -39,7 +39,8 @@ export default function App() {
             data={todos}
             renderItem={({ item }) => (
               <TodoItem item={item} pressHandler={pressHandler}/>
-              // <Text>{item.text}</Text>
+              
+  
             )}
           />
         </View>
